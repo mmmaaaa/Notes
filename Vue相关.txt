@@ -1,0 +1,71 @@
+Vue基础
+1.vue的核心思想就是数据驱动视图
+
+2.如果有template模板，优先执行template
+
+3.  设计模式：M（model）V（view）C（ controller）模式；MVVM模式
+
+4.Vue的指令系统:
+v-html(innerHTML),v-text(innerTEXT),v-if,v-show,v-band,v-for,v-model
+v-show跟v-is的区别：
+v-if 是“真正”的条件渲染，因为它会确保在切换过程中条件块内的事件监听器和子组件适当地被销毁和重建。
+v-if 也是惰性的：如果在初始渲染时条件为假，则什么也不做——直到条件第一次变为真时，才会开始渲染条件块。
+相比之下，v-show 就简单得多——不管初始条件是什么，元素总是会被渲染，并且只是简单地基于 CSS 进行切换。
+一般来说，v-if 有更高的切换开销，而 v-show 有更高的初始渲染开销。因此，如果需要非常频繁地切换，则使用 v-show 较好；如果在运行时条件很少改变，则使用 v-if 较好。
+
+5.局部组件创建（先声明，在挂载，再使用），全局组件创建：例: Vue.component('Vbtn',{template:`<button></button>`});
+
+6.组件间通信
+（1）父-》子
+1.先给父组件中绑定自定义的属性
+2.在子组件中使用props接收父组件传递的数据
+3.可以在子组件中任意使用
+（2）子-》父
+1.在父组件绑定自定义事件
+2.在子组件中触发原生的事件，在函数中使用$emit触发自定义的函数
+
+7.插槽:内置组件<slot>作为承载分发内容的出口。
+
+8.过滤器：
+1，声明过滤器
+2，{{数据|过滤器的名字}}
+
+9.监听（watch）：
+基本数据类型：简单监视
+复杂数据类型：深度监视
+
+10.生命周期:created:function(){发起ajax请求}。
+
+11.获取原生的js DOW对象：给标签绑定ref = ’xxx‘属性，然后使用this.$refs.xxx获取（在mounted方法里），如果是个组件绑定ref属性，获取的是当前的组件对象。
+
+Vue-router
+使用方法：
+（1）引入Vue模块
+（2）引入Vue-router模块
+（3）让Vue使用该VueRouter创建
+（4）创建router对象
+（5）配置路由对象
+(6)两个全局组件：router-link ==》a to==>href   router-view ==》路由匹配组件的出口
+给Vue实例化对象挂载了两个对象this.$router（他就是VueRouter）this.$route（配置路由信息的对象）
+命名路由：绑定自定义的属性：:to="{name:'xxx'}"
+路由的参数：path:'/user/:id
+         :to="{name:'user',params:{id:1}}"
+         path:'/user
+         :to="{name:'user',quary:{userId:1}}"
+嵌套路由（应用：子结构是不同的页面结构）
+一个router-view中嵌套另外一个router-view
+
+axios
+Axios 是一个基于 promise 的 HTTP 库，可以用在浏览器和 node.js 中。
+特性：
+   从浏览器中创建 XMLHttpRequests
+   从 node.js 创建 http 请求
+   支持 Promise API
+   拦截请求和响应
+   转换请求数据和响应数据
+   取消请求
+   自动转换 JSON 数据
+   客户端支持防御 XSRF
+
+webpack
+本质上，webpack 是一个现代 JavaScript 应用程序的静态模块打包器(module bundler)。当 webpack 处理应用程序时，它会递归地构建一个依赖关系图(dependency graph)，其中包含应用程序需要的每个模块，然后将所有这些模块打包成一个或多个 bundle。
