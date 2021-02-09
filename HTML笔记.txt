@@ -1,0 +1,73 @@
+HTML是一种超文本标记语言，他不属于编程语言。
+
+1. HTML是一种超文本标记语言，他不属于编程语言。
+
+2. H5是2014年后推出的，他是公认的下一代web语言，是重要的网络推手。
+
+3. HTML具有简易型，可拓展性，平台无关性和通用性等特点。
+
+4. 网页分为静态和动态两种。
+
+5. 五大主流浏览器：IE（Edge）,FireFox,Chrome,Opera,safari。
+
+6. 浏览器内核由渲染引擎和JS引擎两部分组成。
+
+   内核：Trident(IE),Gecko(FireFox),Webkit(safari/chrome),Blink(chrome/opera)。国内大多数浏览器采用双核驱动（Trident&Webkit或Trident&Blink)
+
+   移动端：iPhone和iPad采用的是webkit内核，Android4.4以下版本采用的是webkit内核，Android4.4及以上采用的是blink内核。
+
+7. 一个网页的基本组成:
+
+   <!DOCTYPE HTML>
+       <html>
+           <head>
+           </head>
+           <body>
+           </body>
+   </html>
+
+8. 标签分块级和行级（内联）两种。
+
+   块级独占一行，识别宽高，如果不设置，宽度为整行宽高，高度为实际内容高度。
+
+   行级不独占一行，不能设置宽高，宽高分别为实际的宽高。块级标签可以通过设置样式：display：inline设置为行级标签，行级标签可以通过设置样式：display：block设置为块级标签。
+
+   块级标签有：div，p，h1-h6，ul，ol，pre，table，address等。
+
+   行级标签有：span，a，b，strong，i，em，sup，sub
+
+   img属于行级块标签，相当于执行了display：inline-block。
+
+9. W3C规范由结构，表现和行为三部分组成。
+
+10. W3C中的嵌套规范：
+
+    （1）块级元素可以包含行级元素或块级元素，但行级元素只能包含行级元素。
+
+    （2）p，h1-h6，dt标签只能包含行级标签，不能再包含块级标签。
+
+    （3）块级标签与块级标签并列，行级与行级并列。
+
+11. 在开发过程中，尽量使用语义化标签。
+
+12. 自定义标签格式：data-*
+
+13. table属性：cellpadding：单元格文本与边框的距离；cellspacing：单元格边框间距。
+
+14. 跨行/跨列属性绘制复制表格：rowspan：跨行；colspan：跨列。
+
+15. HTML5 新特性（1.audio和video音视频播放，抛弃了flash。2，新增canvas画布。3,地理定位。4，离线缓存。5，硬件加速。6，web socket（全双工通信）7，增加了本地存储。8，新增一些语义化标签。
+
+16. 网页布局标签：header，nav，aside，main，section，article，footer
+
+17. contentEditable：true/false   （将标签转为可编辑模式，可适用于所有标签）
+
+18. 表单的get和post两种，他们的区别：1.get是以字节为单位提交，，post是以字符为单位提交。2.get是明文方式，提交的数据会显示在地址栏中，一般不用来传输一些敏感的数据，post是暗文方式提交的。3.get在浏览器中回退是无害的，而post会再次提交请求。4.get会被浏览器自动缓存，而post不会，需要手动缓存。
+
+19. 
+
+    
+
+    
+
+    
